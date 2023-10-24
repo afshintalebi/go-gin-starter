@@ -17,7 +17,7 @@ func SetupI18n(req *http.Request) {
 
 	// setup to load JSON files for translations
 	bundle.RegisterUnmarshalFunc("json", json.Unmarshal)
-	bundle.MustLoadMessageFile("./assets/i18n/en.json")
+	bundle.MustLoadMessageFile("./assets/translations/en.json")
 
 	// get language from the header, if failed the default language will load
 	accept := req.Header.Get("Accept-Language")
