@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/afshintalebi/go-gin-starter/i18n"
+	"github.com/afshintalebi/go-gin-starter/middlewares"
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,6 +16,9 @@ func SetupServer() *http.Server {
 
 	// recovery middleware recovers from any panics and writes a 500 if there was one.
 	router.Use(gin.Recovery())
+
+	// setup middlewares
+	router.Use(middlewares.LanguageMiddleware())
 
 	// call some requirements
 	router.Use(func(ctx *gin.Context) {
