@@ -1,0 +1,26 @@
+{
+  "name": "go-gin-starter",
+  "version": "1.0.0",
+  "description": "boilerplate for the Gin framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afshintalebi/go-gin-starter.git"
+  },
+  "keywords": [
+    "go",
+    "gin",
+    "api",
+    "boilerplate",
+    "starter"
+  ],
+  "author": "Afshin Talebi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afshintalebi/go-gin-starter/issues"
+  },
+  "homepage": "https://github.com/afshintalebi/go-gin-starter#readme"
+}
