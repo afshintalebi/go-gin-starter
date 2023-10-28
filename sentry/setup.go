@@ -8,10 +8,6 @@ import (
 	"github.com/getsentry/sentry-go"
 )
 
-func getDSN() string {
-	return config.GetEnvSentryDSN()
-}
-
 func init() {
 	if !config.IsProductionMode() {
 		fmt.Println("Sentry doesn't work on the DEBUG mode")
@@ -19,7 +15,7 @@ func init() {
 	}
 
 	err := sentry.Init(sentry.ClientOptions{
-		Dsn: getDSN(),
+		Dsn: config.GetEnvSentryDSN(),
 		// Set TracesSampleRate to 1.0 to capture 100%
 		// of transactions for performance monitoring.
 		// We recommend adjusting this value in production,
