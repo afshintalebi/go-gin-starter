@@ -14,8 +14,8 @@ func SetupServer() *http.Server {
 
 	router := gin.Default()
 
-	// recovery middleware recovers from any panics and writes a 500 if there was one.
-	router.Use(gin.Recovery())
+	// use a custom recovery function to format the global errors
+	router.Use(gin.CustomRecovery(middlewares.ErrorMiddleware))
 
 	// setup middlewares
 	router.Use(middlewares.LanguageMiddleware())
