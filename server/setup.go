@@ -27,6 +27,8 @@ func SetupServer() *http.Server {
 		i18n.SetupI18n(ctx.Request)
 	})
 
+	setupV1Routes(router)
+
 	server := &http.Server{
 		Addr:    ":8080",
 		Handler: router,
