@@ -5,6 +5,7 @@ import (
 
 	"github.com/afshintalebi/go-gin-starter/i18n"
 	"github.com/afshintalebi/go-gin-starter/middlewares"
+	sentrygin "github.com/getsentry/sentry-go/gin"
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,11 +15,12 @@ func SetupServer() *http.Server {
 
 	router := gin.Default()
 
-	// use a custom recovery function to format the global errors
-	router.Use(gin.CustomRecovery(middlewares.ErrorMiddleware))
-
 	// setup middlewares
+	router.Use(gin.CustomRecovery(middlewares.ErrorMiddleware))
 	router.Use(middlewares.LanguageMiddleware())
+	router.Use(sentrygin.New(sentrygin.Options{
+		Repanic: true,
+	}))
 
 	// call some requirements
 	router.Use(func(ctx *gin.Context) {
