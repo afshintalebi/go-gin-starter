@@ -15,3 +15,8 @@ This is a starter boilerplate for the Gin framework in the Go programming langua
 We utilize [Fresh](https://github.com/gravityblast/fresh) for seamless live reload support. 
 
 To initiate live reloading, simply run the `fresh` command from the root directory of your project.
+
+## Tasks
+- [ ] Add Viper
+- [ ] Docker
+- [ ] Tests 
