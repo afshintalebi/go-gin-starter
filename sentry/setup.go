@@ -14,8 +14,14 @@ func init() {
 		return
 	}
 
+	
+	sentryDSN := config.GetSentryDSN()
+	if sentryDSN == "" {
+		panic("Sentry DSN is empty")
+	}
+
 	err := sentry.Init(sentry.ClientOptions{
-		Dsn: config.GetEnvSentryDSN(),
+		Dsn: sentryDSN,
 		// Set TracesSampleRate to 1.0 to capture 100%
 		// of transactions for performance monitoring.
 		// We recommend adjusting this value in production,

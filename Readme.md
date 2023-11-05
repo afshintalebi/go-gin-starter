@@ -17,6 +17,6 @@ We utilize [Fresh](https://github.com/gravityblast/fresh) for seamless live relo
 To initiate live reloading, simply run the `fresh` command from the root directory of your project.
 
 ## Tasks
-- [ ] Add Viper
+- [x] Integrate Viper
 - [ ] Docker
 - [ ] Tests 

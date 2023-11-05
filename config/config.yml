@@ -1,0 +1,5 @@
+App:
+  Name: "go-gin-starter"
+
+GIN_MODE: "debug"
+SENTRY_DSN: "https://sentry.io"

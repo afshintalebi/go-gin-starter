@@ -1,25 +1,40 @@
 package config
 
 import (
-	"os"
+	"fmt"
 
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/viper"
 )
 
 func GetEnv(key string) string {
-	return os.Getenv(key)
+	return viper.GetString(key)
 }
 
-func GetEnvDevMode() string {
-	return GetEnv("GIN_MODE")
+func GetAppEnv() string {
+	var configuration Configurations
+	mode := GetEnv("GIN_MODE")
+	if mode == "" {
+		mode = configuration.App.Env
+	}
+
+	return mode
 }
 
-func GetEnvSentryDSN() string {
-	return GetEnv("SENTRY_DSN")
+func GetSentryDSN() string {
+	var configuration Configurations
+	sentryDsn := GetEnv("SENTRY_DSN")
+	fmt.Println(fmt.Printf("<<< sentryDsn is %s >>>", sentryDsn))
+
+	if sentryDsn == "" {
+		sentryDsn = configuration.Sentry.DSN
+	}
+
+	return sentryDsn
 }
 
 func IsProductionMode() bool {
-	devMode := GetEnvDevMode()
+	devMode := GetAppEnv()
 
 	return devMode == "release"
 }
