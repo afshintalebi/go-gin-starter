@@ -12,9 +12,9 @@ This is a starter boilerplate for the Gin framework in the Go programming langua
 
 ## Running the App
 
-We utilize [Fresh](https://github.com/gravityblast/fresh) for seamless live reload support. 
+We utilize [wgo](https://github.com/bokwoon95/wgo) for seamless live reload support. 
 
-To initiate live reloading, simply run the `fresh` command from the root directory of your project.
+To initiate live reloading, simply run the `wgo run main.go` command from the root directory of your project.
 
 ## Tasks
 - [x] Integrate Viper
