@@ -18,5 +18,5 @@ To initiate live reloading, simply run the `wgo run main.go` command from the ro
 
 ## Tasks
 - [x] Integrate Viper
-- [ ] Docker
+- [x] Docker
 - [ ] Tests 
