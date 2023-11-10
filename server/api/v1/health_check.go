@@ -6,9 +6,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func HealthCheckHandler(ctx *gin.Context) {
+func HealthCheckHandler(c *gin.Context) {
 	if serverIsHealthy() {
-		ctx.JSON(http.StatusOK, gin.H{
+		c.JSON(http.StatusOK, gin.H{
 			"message": "Server is healthy",
 		})
 	} else {

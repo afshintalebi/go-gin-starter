@@ -23,8 +23,8 @@ func SetupServer() *http.Server {
 	}))
 
 	// call some requirements
-	router.Use(func(ctx *gin.Context) {
-		i18n.SetupI18n(ctx.Request)
+	router.Use(func(c *gin.Context) {
+		i18n.SetupI18n(c.Request)
 	})
 
 	setupV1Routes(router)

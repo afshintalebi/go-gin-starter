@@ -1,3 +1,7 @@
 {
-  "HelloWorld": "Hello World"
+  "HelloWorld": "Hello World",
+  "Error400Message": "Error 400",
+  "Error404Message": "Error 404",
+  "Error500Message": "Error 500",
+  "ErrorDescription": "Description of error"
 }

@@ -1,6 +1,6 @@
 package errutils
 
-type HttpResponse struct {
+type HttpErrorResponse struct {
 	Message     string
 	Status      int
 	Description string
