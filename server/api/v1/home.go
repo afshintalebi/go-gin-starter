@@ -1,7 +1,9 @@
 package apiv1
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+)
 
-func HomeHandler(ctx *gin.Context) {
-	ctx.String(200, "API Version 1")
+func HomeHandler(c *gin.Context) {
+	c.String(200, "API Version 1")
 }

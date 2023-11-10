@@ -17,8 +17,7 @@ func LanguageMiddleware() gin.HandlerFunc {
 			language = allowedLanguages[0]
 			c.Request.Header.Add("Accept-Language", language)
 		} else if language != "" && !slices.Contains(allowedLanguages, language) {
-			c.AbortWithError(500, errors.New("language is invalid"))
-			return
+			panic(errors.New("language value in header is invalid"))
 		}
 
 		// save language to the context
