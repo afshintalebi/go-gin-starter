@@ -12,7 +12,14 @@ require (
 	github.com/spf13/viper v1.17.0
 	go.uber.org/zap v1.26.0
 	golang.org/x/text v0.13.0
-	github.com/gin-contrib/cors v1.4.0
+)
+
+require (
+	github.com/gin-contrib/cors v1.4.0 // indirect
+	github.com/JGLTechnologies/gin-rate-limit v1.5.4 // indirect
+	github.com/cespare/xxhash/v2 v2.2.0 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
+	github.com/redis/go-redis/v9 v9.0.2 // indirect
 )
 
 require (

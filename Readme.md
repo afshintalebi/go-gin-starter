@@ -10,6 +10,7 @@ This is a starter boilerplate for the Gin framework in the Go programming langua
 - [Sentry](https://github.com/getsentry/sentry-go)
 - [Zap Logger](https://github.com/uber-go/zap)
 - [CORS](https://github.com/gin-contrib/cors)
+- [Rate Limiter](https://github.com/JGLTechnologies/gin-rate-limit)
 
 ## Running the App
 

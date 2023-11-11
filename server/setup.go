@@ -5,6 +5,7 @@ import (
 
 	"github.com/afshintalebi/go-gin-starter/i18n"
 	"github.com/afshintalebi/go-gin-starter/middlewares"
+	ratelimiter "github.com/afshintalebi/go-gin-starter/rate-limiter"
 	sentrygin "github.com/getsentry/sentry-go/gin"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -23,6 +24,7 @@ func SetupServer() *http.Server {
 		Repanic: true,
 	}))
 	router.Use(cors.Default())
+	router.Use(ratelimiter.GetMiddlewareHandler())
 
 	// call some requirements
 	router.Use(func(c *gin.Context) {
