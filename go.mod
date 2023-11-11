@@ -12,6 +12,7 @@ require (
 	github.com/spf13/viper v1.17.0
 	go.uber.org/zap v1.26.0
 	golang.org/x/text v0.13.0
+	github.com/gin-contrib/cors v1.4.0
 )
 
 require (

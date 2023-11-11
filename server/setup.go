@@ -6,6 +6,7 @@ import (
 	"github.com/afshintalebi/go-gin-starter/i18n"
 	"github.com/afshintalebi/go-gin-starter/middlewares"
 	sentrygin "github.com/getsentry/sentry-go/gin"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -21,6 +22,7 @@ func SetupServer() *http.Server {
 	router.Use(sentrygin.New(sentrygin.Options{
 		Repanic: true,
 	}))
+	router.Use(cors.Default())
 
 	// call some requirements
 	router.Use(func(c *gin.Context) {
